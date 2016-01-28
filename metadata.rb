@@ -4,6 +4,6 @@ maintainer_email 'me@cobus.io'
 license          'MIT'
 description      'Installs/Configures chef-wrapper-datadog-agent'
 long_description 'Installs/Configures chef-wrapper-datadog-agent'
-version          '0.1.2'
+version          '0.1.4'
 
 depends 'datadog', '~> 2.2.0'

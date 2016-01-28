@@ -1,20 +1,15 @@
+mesos_instances = Array.new
+
 if node.role?('mesos-master')
-  default['datadog']['mesos']["instances"] = [{
+  mesos_instances << {
     'url'               => 'http://localhost:5050',
     'timeout' => 8,
     'tags'              => [node.chef_environment]
-  }]
-  default['datadog']['mesos']["init_config"] = {
-      default_timeout: 10
-    }
+  }
 end
 
-if node.role?('mesos-slave')
-  default['datadog']['mesos']["instances"] = [{
-    'url'               => 'http://localhost:5051',
-    'timeout' => 8,
-    'tags'              => [node.chef_environment]
-  }]
+if (mesos_instances.length > 0)
+  default['datadog']['mesos']["instances"] = mesos_instances
   default['datadog']['mesos']["init_config"] = {
       default_timeout: 10
     }

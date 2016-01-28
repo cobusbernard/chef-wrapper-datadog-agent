@@ -40,4 +40,12 @@ if node.role?('rabbitmq-server')
   include_recipe 'datadog::rabbitmq'
 end
 
+if node.role?('mesos-master')
+  include_recipe 'datadog::mesos'
+end
+
+if node.role?('mesos-slave')
+  include_recipe 'datadog::mesos'
+end
+
 include_recipe 'datadog::dd-agent'

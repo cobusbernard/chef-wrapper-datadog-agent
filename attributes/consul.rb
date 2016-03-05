@@ -5,7 +5,7 @@ if node.role?('consul-server')
       'new_leader_checks' => true,
       'catalog_checks'    => true,
       'service_whitelist' => ['consul'],
-      'tags'              => [node.chef_environment]
+      'tags'              => [node.chef_environment, 'consul']
     }
   ]
 end

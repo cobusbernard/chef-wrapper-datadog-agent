@@ -4,7 +4,7 @@ if node.role?('mesos-master')
   mesos_instances << {
     'url'               => 'http://localhost:5050',
     'timeout' => 8,
-    'tags'              => [node.chef_environment]
+    'tags'              => [node.chef_environment, 'mesos']
   }
 end
 

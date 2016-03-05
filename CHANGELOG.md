@@ -1,3 +1,7 @@
+# 0.1.5
+
+Adding in Marathon support via forked cookbook.
+
 # 0.1.4
 
 Removing the slave logging, only need to monitor the master.

@@ -42,6 +42,7 @@ end
 
 if node.role?('mesos-master')
   include_recipe 'datadog::mesos'
+  include_recipe 'datadog::marathon'
 end
 
 include_recipe 'datadog::dd-agent'

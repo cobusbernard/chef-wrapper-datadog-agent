@@ -1,3 +1,7 @@
+# 0.1.6
+
+Adding in Marathon recipe when a node is a Mesos master.
+
 # 0.1.5
 
 Adding in Marathon support via forked cookbook.
